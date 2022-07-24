@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">plate_reader_camerax_vision</string>
+
+    <string name="err_capture_image">Error while capturing image</string>
+    <string name="err_convert_image">Error while converting image</string>
+    <string name="err_scan_image">Error while scanning image</string>
+    <string name="permission_accepted">Camera permission accepted</string>
+    <string name="permission_needed">Camera permission is needed to access the camera</string>
+    <string name="permission_denied">Camera permission was permanently denied. You can enable it in the app settings.</string>
+    n
+</resources>
