@@ -7,5 +7,5 @@
     <string name="permission_accepted">Camera permission accepted</string>
     <string name="permission_needed">Camera permission is needed to access the camera</string>
     <string name="permission_denied">Camera permission was permanently denied. You can enable it in the app settings.</string>
-    n
+
 </resources>
