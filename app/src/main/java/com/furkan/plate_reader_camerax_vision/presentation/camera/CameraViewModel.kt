@@ -19,10 +19,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CameraViewModel @Inject constructor(
-    private val capturePhotoUseCase: CapturePhotoUseCase,
-    private val imageCapture: ImageCapture
+    private val capturePhotoUseCase: CapturePhotoUseCase
 ) : ViewModel() {
-    val myImageCapture = imageCapture
+
+    @Inject
+    lateinit var myImageCapture: ImageCapture
 
     sealed class ScanPhotoEvent {
         data class SuccessEvent(val resource: Resource<String>) : ScanPhotoEvent()
