@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
+import com.furkan.plate_reader_camerax_vision.core.utils.decodeBase64
 import com.furkan.plate_reader_camerax_vision.presentation.ui.theme.Typography
 
 
@@ -29,7 +30,7 @@ fun ScanScreen(
         Image(
             modifier = modifier,
             painter = rememberImagePainter(
-                data = strUri
+                data = strUri.decodeBase64()
             ),
             contentDescription = "Captured image"
         )

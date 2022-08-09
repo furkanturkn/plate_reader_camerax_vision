@@ -1,5 +1,6 @@
 buildscript {
     ext {
+        //TODO: 1.2.0
         compose_version = '1.1.0-beta01'
     }
 

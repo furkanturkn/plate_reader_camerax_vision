@@ -18,10 +18,13 @@ import androidx.navigation.navArgument
 import com.furkan.plate_reader_camerax_vision.BuildConfig
 import com.furkan.plate_reader_camerax_vision.presentation.camera.CameraScreen
 import com.furkan.plate_reader_camerax_vision.presentation.scan.ScanScreen
+import com.furkan.plate_reader_camerax_vision.presentation.ui.components.Permission
 import com.furkan.plate_reader_camerax_vision.presentation.ui.theme.Plate_reader_camerax_visionTheme
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
+@ExperimentalPermissionsApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +35,7 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
+            Permission()
             val navController = rememberNavController()
 
             NavHost(
@@ -49,7 +53,7 @@ class MainActivity : ComponentActivity() {
                 }
 
                 composable(
-                    route = "convert_screen/{strUri}",
+                    route = "scan_screen/{strUri}",
                     arguments = listOf(
                         navArgument(name = "strUri") {
                             type = NavType.StringType
