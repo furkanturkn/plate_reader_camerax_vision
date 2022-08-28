@@ -12,4 +12,5 @@ object Constants {
     // #99 XXX 99
     const val PLATE_REGEX_TEMPLATE_3 = """\b\d{2}.{0,1}[^\d\W]{0,1}.{0,1}\b[^\d\W]{0,1}.{0,1}\w{0,1}.{0,1}\b\d{2,3}\b"""
 
+    const val RECTANGLE_PATH = "M 10 10 H 300 V 65 H 10 L 10 10"
 }
